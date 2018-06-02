@@ -1,4 +1,5 @@
 {
-  "name": "PhysicianWellness",
-  "displayName": "PhysicianWellness"
+  "expo": {
+    "sdkVersion": "27.0.0"
+  }
 }
