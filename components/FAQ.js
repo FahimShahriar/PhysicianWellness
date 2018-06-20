@@ -16,52 +16,48 @@ export default class FAQ extends Component{
       <View style = {styles.fill}
       >
         <View style = {{flexDirection: 'column', flex: 1, justifyContent: 'space-evenly',}}>
-         
-        <RectIcon
-          title = 'How to Apply for Privileges'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'How to Change my Status'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Physician Opportunities'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Information About Absences'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Contact us'
-          text = 'this is text'
-          click = {() => this.props.navigation.navigate('Email')}
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Need help?'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Need help?'
-          text = 'this is text'
-        >
-        </RectIcon>
-        <RectIcon
-          title = 'Further Education'
-          text = 'this is text'
-        >
-        </RectIcon>
-
-      
+          <RectIcon
+            title = 'How to Apply for Privileges'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'How to Change my Status'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Physician Opportunities'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Information About Absences'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Contact us'
+            text = 'this is text'
+            click = {() => this.props.navigation.navigate('Email')}
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Need help?'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Staff Directory?'
+            text = 'this is text'
+          >
+          </RectIcon>
+          <RectIcon
+            title = 'Further Education'
+            text = 'this is text'
+          >
+          </RectIcon>
         </View>
-        
       </View>
       </ScrollView>
     )
