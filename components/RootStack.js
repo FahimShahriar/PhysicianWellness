@@ -11,6 +11,7 @@ import morneau from '../components/morneau.js';
 import Documents from '../components/documents.js';
 import FAQ from '../components/FAQ.js'
 import Email from '../components/email.js'
+import TimeTracking from './timeTracking.js'
 
 let RootStack = createStackNavigator(
   {
@@ -70,6 +71,9 @@ let RootStack = createStackNavigator(
       },
       Email:{
         screen: Email
+      },
+      TimeTracking:{
+        screen: TimeTracking
       },
       FAQ:{
         screen: FAQ, 

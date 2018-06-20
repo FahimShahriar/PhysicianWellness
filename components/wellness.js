@@ -23,7 +23,7 @@ export default class Wellness extends Component {
             <Icon 
                 img = {require('../Pictures/Icons/documents_icon.png')}
                 title = 'Time Tracking'
-                click = {() => this.props.navigation.navigate('breathing') }>
+                click = {() => this.props.navigation.navigate('TimeTracking') }>
             </Icon>
           </View>
           <View style={styles.rowBottom}>

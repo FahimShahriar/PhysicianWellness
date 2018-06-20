@@ -28,6 +28,7 @@
     "react-native-fast-image": "^4.0.14",
     "react-native-material-dropdown": "^0.11.1",
     "react-native-responsive-fontsize": "^0.1.2",
+    "react-native-table-component": "^1.1.8",
     "react-navigation": "^2.3.1"
   }
 }

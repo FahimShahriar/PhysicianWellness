@@ -10,6 +10,7 @@ export default class Email extends Component {
   constructor(props) {
     super(props);
     this.state = {text: ''};
+    this.state = {data: ''};
   }
 
   handleEmail = () => {
