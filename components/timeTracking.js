@@ -59,7 +59,7 @@ export default class TimeTracking extends Component {
 
       this.setState({total: sum})
 
-      total();
+
      
       
     }
