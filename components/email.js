@@ -52,9 +52,11 @@ export default class Email extends Component {
             <FormLabel style = {{flex:1, flexWrap: 'wrap'}}>Email content</FormLabel>
             <FormInput multiline containerStyle = {{flex:1, flexWrap: 'wrap', padding: '5%'}} inputStyle = {{flex:1, flexWrap: 
             'wrap', padding: '30%'}} onChangeText={(text) => this.setState({text})} >
-             
             </FormInput>
           
+        <Text style = {styles.fill}>
+              {this.state.text}
+            </Text>
         <Button style = {{flex:1,}} title = 'submit' onPress = {this.handleEmail}>
               {this.state.text}
         </Button>
