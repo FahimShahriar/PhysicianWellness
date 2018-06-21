@@ -32,22 +32,23 @@ export default class TimeTracking extends Component {
   render() {
     const state = this.state;
 
-    const tableData1 = [];
-    for (let i = 0; i < 30; i += 1) {
-      const rowData = [];
-      for (let j = 0; j < 9; j += 1) {
-        rowData.push(`${i}${j}`);
-      }
-      tableData1.push(rowData)
 
-    function update(){
+    let update = (text) => {
     {/*}  let tableData = [ state.tableData ];
       tableData[3] = {...tableData[3], key: ' jbhg'};
     this.setState({ tableData });*/}
 
+    const tableData1 = [];
+    const rowData = [];
+      for (let j = 0; j < 2; j += 1) {
+        rowData.push(this.state.activity);
+      }
+      tableData1.push(rowData);
+
+      this.setState({tableData: tableData1})
     ;
     }
-}
+
     return (
       <ScrollView style = {styles.fill}>
       <View style={styles1.container}>
@@ -56,9 +57,17 @@ export default class TimeTracking extends Component {
           <Rows data={this.state.tableData} textStyle={styles1.text}/>
           
         </Table>
-        <TextInput style = {styles.fill} onChangeText={() => this.setState({tableData: tableData1})}/>
+        <TextInput 
+          style = {styles.fill} 
+          onChangeText={
+            (text) => {this.setState({activity: text})
+            update()}
+          }
+        /> 
         
-        <Text> hello </Text>
+
+        {/*    <TextInput style = {styles.fill} onChangeText={() => this.setState({tableData: tableData1})}/>*/}
+        <Text> {this.state.activity} </Text>
       </View>
       </ScrollView>
     )
