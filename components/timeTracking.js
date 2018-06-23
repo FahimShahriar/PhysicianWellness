@@ -87,6 +87,7 @@ export default class TimeTracking extends Component {
               value = {this.state.activity}
               placeholder = 'Enter an activity'
               editable = {!this.state.filled}
+              keyboardShouldPersistTaps={false}
               clearButtonMode="always"
               onSubmitEditing ={ 
                 (event, previousState) => {
