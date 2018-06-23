@@ -21,7 +21,8 @@ export default class TimeTracking extends Component {
       activity: '',
       time: '',
       total: '',
-      tableFoot: []
+      tableFoot: [],
+      filled: false
 
 
     }
@@ -57,6 +58,7 @@ export default class TimeTracking extends Component {
             {tableData2: empty}, 
             () => { total() } 
           )
+      
         }
       )
     }
@@ -73,7 +75,7 @@ export default class TimeTracking extends Component {
     return (
       <ScrollView style = {styles.fill}>
       <View style={styles1.container}>
-        <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}}>
+        <Table borderStyle={{borderWidth: 2, borderColor: '#c8e1ff'}} style = {styles.fill}>
           <Row data={state.tableHead} style={styles1.head} textStyle={styles1.text}/>
           <Rows data={this.state.tableData} textStyle={styles1.text}/>
         </Table>
@@ -81,16 +83,17 @@ export default class TimeTracking extends Component {
         <View style = {styles.row}>
           <View style = {styles1.container2}>
             <TextInput 
-              style = {styles.fill} 
-       
-             
+              style = {styles.fill}       
               value = {this.state.activity}
               placeholder = 'Enter an activity'
-              editable = {true}
+              editable = {!this.state.filled}
+              clearButtonMode="always"
               onSubmitEditing ={ 
-                (event) => {
+                (event, previousState) => {
                   let text = event.nativeEvent.text;
                   setActivity(text)
+                  console.log(this.state.filled)
+                  this.setState(previousState => {return {filled: !previousState.filled}})
                 }
               }
             />
@@ -101,10 +104,17 @@ export default class TimeTracking extends Component {
               editable = {true}
               placeholder = 'Enter a time in minutes'
               value = {this.state.time}
+              editable = {this.state.filled}
+              clearButtonMode="always"
+
+         
               onSubmitEditing ={ 
                 (event) => {
                   let text = event.nativeEvent.text;
                   setTime(text)    
+                  this.setState(previousState => {return {filled: !previousState.filled}})
+              
+                
                 }
               }
             /> 
