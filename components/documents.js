@@ -3,12 +3,16 @@ import { StyleSheet, Text, View, Animated, TouchableOpacity, ImageBackground, We
 
 export default class Documents extends Component{
    render(){
+    const { navigation } = this.props;
+     const src = navigation.getParam('src', 'NO-SRC');
      return (
       <View style={{ flex: 1 }}>
       <WebView
           bounces={false}
           scrollEnabled={false} 
-          source={{ uri: 'http://www.africau.edu/images/default/sample.pdf' }} />
+          source={{uri: src}} 
+          style = {{flex:1}}/>
+         
       </View>
      )
    }

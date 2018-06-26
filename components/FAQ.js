@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Text, View, TouchableOpacity, ImageBackground, Image, Linking, ScrollView, Picker} from 'react-native';
+import { Text, View, TouchableOpacity, ImageBackground, Image, Linking, ScrollView, WebView, Picker} from 'react-native';
 import styles from './styles.js'
 import Icon from '../components/icon.js';
 import AskExpert from './AskExpert';
@@ -19,6 +19,7 @@ export default class FAQ extends Component{
           <RectIcon
             title = 'How to Apply for Privileges'
             text = 'this is text'
+            click = {() => this.props.navigation.navigate('Documents', {src: 'http://www.africau.edu/images/default/sample.pdf' }) }
           >
           </RectIcon>
           <RectIcon
@@ -62,4 +63,12 @@ export default class FAQ extends Component{
       </ScrollView>
     )
   }
+}
+
+const navigator1 = () => {
+  <WebView
+              bounces={false}
+              scrollEnabled={false} 
+              source={{ uri: 'http://www.africau.edu/images/default/sample.pdf' }} />
+  
 }

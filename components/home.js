@@ -31,12 +31,12 @@ export default class Home extends Component {
               <Icon 
                 img = {require('../Pictures/Icons/documents_icon.png')}
                 title = 'Documents'
-                click = {() => this.props.navigation.navigate('Documents') }>
+                click = {() => this.props.navigation.navigate('Documents', {src: 'http://www.africau.edu/images/default/sample.pdf'}) }>
               </Icon>
               <Icon 
                 img = {require('../Pictures/Icons/askExpert_icon.png')}
                 title = 'Ask an Expert'
-                click = {() => this.props.navigation.navigate('AskExpert') }>
+                click = {() => this.props.navigation.navigate('AskExpert')}>
               </Icon>
             </View>
           </View>
