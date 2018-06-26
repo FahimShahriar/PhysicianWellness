@@ -29,8 +29,8 @@ export default class Wellness extends Component {
           <View style={styles.rowBottom}>
             <Icon 
                 img = {require('../Pictures/Icons/documents_icon.png')}
-                title = 'Breathing'
-                click = {() => this.props.navigation.navigate('Breathing') }>
+                title = 'Pomodoro'
+                click = {() => this.props.navigation.navigate('Pomodoro') }>
             </Icon>
             <Icon 
                 img = {require('../Pictures/Icons/documents_icon.png')}

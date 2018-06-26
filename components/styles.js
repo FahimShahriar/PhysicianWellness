@@ -78,4 +78,8 @@ export default StyleSheet.create({
   fill: {
     flex:1, 
   },
+  fill1: {
+    flex:1, 
+    backgroundColor: '#f1f2f4'
+  },
 });

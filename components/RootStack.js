@@ -12,6 +12,8 @@ import Documents from '../components/documents.js';
 import FAQ from '../components/FAQ.js'
 import Email from '../components/email.js'
 import TimeTracking from './timeTracking.js'
+import Pomodoro from './pomodoro.js'
+
 
 let RootStack = createStackNavigator(
   {
@@ -73,7 +75,11 @@ let RootStack = createStackNavigator(
         screen: Email
       },
       TimeTracking:{
-        screen: TimeTracking
+        screen: TimeTracking,
+        navigationOptions: () => ({
+          title: 'Time Tracking',
+          headerBackTitle: 'Tracking'
+        })
       },
       FAQ:{
         screen: FAQ, 
@@ -87,6 +93,12 @@ let RootStack = createStackNavigator(
           title: 'Breathing'
           }),
       },
+      Pomodoro:{
+        screen: Pomodoro,
+        navigationOptions: () => ({
+          title: 'Pomodoro'
+          }),
+      }
 
       
 
