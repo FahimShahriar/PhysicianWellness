@@ -80,6 +80,6 @@ export default StyleSheet.create({
   },
   fill1: {
     flex:1, 
-    backgroundColor: '#f1f2f4'
+    backgroundColor: 'white'
   },
 });
