@@ -34,111 +34,15 @@ export default class Pomodoro extends Component {
  
   
   render() {
-
-   
-    const state = this.state;
-
-    let setActivity = (text) => {
-      this.setState( 
-        {activity: text}, 
-        () => { 
-          const rowData = [];
-          rowData.push(this.state.activity)
-          this.setState({tableData2: rowData})
-        }
-      )
-    }
-
-    let setTime = () => {
-      this.setState({yes: true}, () => {this.forceUpdate()})
-      console.log(this.state.yes)
-      
-    }
-
-    let setFalse = () =>{
-      this.setState({yes: true}, () => {this.forceUpdate()})
-      console.log('ffffffffff')
-    }
-
-    let setter = () => {
-    
-     return <CountDown
-        
-       
-        onPress={() => alert('hello')}
-        until = {5}
-        until2 = {7}
-        size={20}
-        style = {styles.fill}
-       
-      />
-      
-    }
-
-    let setter1 = () => {
-     
-      return <CountDown
-        until={3}
-        until  = {5}
-       
-        onPress={() => alert('bye')}
-        size={20}
-        style = {styles.fill}
-       
-      />
-    
-    }
-
-    let Checker = () => {
-      if(this.state.yes === true){
-        return <Setter />
-      }
-      else{
-        return <Setter1/>
-
-      }
-    }
-
-    let thing = setter()
-
-    let test = () => {
-
-    
-
-
-      <View style = {styles.fill}>
-        
-      
-      <CountDown
-      until={55}
-     
-      onPress={() => alert('hello')}
-      size={20}
-      style = {styles.fill}
-      onFinish = {() => alert('finished')}
-      />
-
-      )
-
-  </View>
-
-        
-        
-   
-          
-    }
-    
-
-
     return (
-
-    
-        <View style = {styles.fill}>
-        
-      
-       { thing}
-       
-
+      <View style = {{flex:1, flexDirection: 'row', alignItems: 'center', justifyContent: 'center'}}>
+        <CountDown
+        onPress={() => alert('hello')}
+        until = {1500}
+        until2 = {300}
+        size = {35}
+        style = {styles.fill}
+      />
     </View>
  
     )
