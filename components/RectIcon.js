@@ -26,7 +26,8 @@ export default class RectIcon extends Component{
                   inColumn={false}
                   style = {styles.fill}
                 >
-                  <CardContent text= {this.props.text} style = {styles.fill}/>
+                   {// <CardContent text= {this.props.text} style = {styles.fill}/>
+                   }
                 </CardAction>
             </Card>
           </TouchableOpacity>

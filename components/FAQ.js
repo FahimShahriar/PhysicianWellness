@@ -19,12 +19,16 @@ export default class FAQ extends Component{
           <RectIcon
             title = 'How to Apply for Privileges'
             text = 'this is text'
-            click = {() => this.props.navigation.navigate('Documents', {src: 'http://www.africau.edu/images/default/sample.pdf' }) }
+            click = {() => this.props.navigation.navigate(
+              'Documents', 
+              {src: 'http://www.africau.edu/images/default/sample.pdf' }
+            )}
           >
           </RectIcon>
           <RectIcon
             title = 'How to Change my Status'
             text = 'this is text'
+            click = {() => {this.props.navigation.navigate('Email')}}
           >
           </RectIcon>
           <RectIcon
@@ -49,8 +53,14 @@ export default class FAQ extends Component{
           >
           </RectIcon>
           <RectIcon
-            title = 'Staff Directory?'
+            title = 'Physician Directory'
             text = 'this is text'
+            click = {() => {this.props.navigation.navigate(
+              'Documents', {
+                src: 'http://www.williamoslerhs.ca/health-care-professionals/programs-services/physician-and-service-directory',
+                title: 'Physician Directory'
+              }
+            )}}
           >
           </RectIcon>
           <RectIcon

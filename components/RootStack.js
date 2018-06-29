@@ -68,8 +68,9 @@ let RootStack = createStackNavigator(
           headerBackTitle: 'MS',
           }),
       },
-      Documents:{
-        screen: Documents
+      Documents:{    
+        screen: Documents,
+   
       },
       Email:{
         screen: Email
