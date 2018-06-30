@@ -16,15 +16,20 @@ export default class Wellness extends Component {
         <View style = {styles.column}>
           <View style={styles.rowTop}>
             <Icon 
-                img = {require('../Pictures/breathing_exercise.gif')}
+                img = {require('../Pictures/Icons/breathing_icon.png')}
                 title = 'Breathing'
                 click = {() => this.props.navigation.navigate('Breathing') }>
             </Icon>
             <Icon 
+                img = {require('../Pictures/Icons/askExpert_icon.png')}
+                title = 'Ask an Expert'
+                click = {() => this.props.navigation.navigate('AskExpert')}>
+              </Icon>
+            {/*<Icon 
                 img = {require('../Pictures/Icons/documents_icon.png')}
                 title = 'Time Tracking'
                 click = {() => this.props.navigation.navigate('TimeTracking') }>
-            </Icon>
+            </Icon>*/}
           </View>
           <View style={styles.rowBottom}>
             <Icon 

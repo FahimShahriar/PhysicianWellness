@@ -18,14 +18,14 @@ export default class MSO extends Component{
         <View style = {styles.column}>
           <View style = {styles.rowTop}>
             <Icon 
-              img = {require('../Pictures/Icons/faq_icon.png')}
-              title = 'FAQ'
-              click = {() => this.props.navigation.navigate('FAQ')}>
+              img = {require('../Pictures/Icons/Resources_icon.png')}
+              title = 'Resources'
+              click = {() => this.props.navigation.navigate('Resources')}>
             </Icon>
             <Icon 
               img = {require('../Pictures/Icons/contact_icon.png')}
               title = 'Contact'
-              click = {() => Linking.openURL('https://www.workhealthlife.com/') }>
+              click = {() => this.props.navigation.navigate('Email')}>
             </Icon>
           </View>
           <View style = {styles.rowBottom}>

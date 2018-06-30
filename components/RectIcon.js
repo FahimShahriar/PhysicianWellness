@@ -16,7 +16,7 @@ export default class RectIcon extends Component{
             style = {{flex:1}}
             onPress= {this.props.click}
           >
-            <Card style = {styles.fill}>
+            <Card style = {styles.fill} >
               <CardTitle 
                 title= {this.props.title} 
                 style = {{flex:1,}}
@@ -26,8 +26,10 @@ export default class RectIcon extends Component{
                   inColumn={false}
                   style = {styles.fill}
                 >
-                   {// <CardContent text= {this.props.text} style = {styles.fill}/>
-                   }
+                <View style = {{flex:1, paddingTop: '2%'}}>
+                    <CardContent text= {this.props.text} style = {styles.fill}/>
+                </View>
+                   
                 </CardAction>
             </Card>
           </TouchableOpacity>

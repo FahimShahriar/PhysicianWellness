@@ -9,10 +9,9 @@ import styles from './components/styles.js';
 import Wellness from './components/wellness.js';
 import breathing from './components/breathing.js';
 import askExpert from './components/AskExpert'
-import OMA from './components/OMA.js';
+
 import MSO from './components/MSO.js';
-import CMHA from './components/CMHA.js';
-import morneau from './components/morneau.js';
+
 
 
 

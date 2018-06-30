@@ -9,7 +9,7 @@ import RectIcon from './RectIcon.js';
 import { Card, CardTitle, CardContent, CardAction, CardButton, CardImage } from 'react-native-cards';
 
 
-export default class FAQ extends Component{
+export default class Resources extends Component{
   render(){
     return (
       <ScrollView>
@@ -42,27 +42,44 @@ export default class FAQ extends Component{
           >
           </RectIcon>
           <RectIcon
-            title = 'Contact us'
-            text = 'this is text'
-            click = {() => this.props.navigation.navigate('Email')}
-          >
-          </RectIcon>
-          <RectIcon
             title = 'Need help?'
             text = 'this is text'
           >
           </RectIcon>
           <RectIcon
             title = 'Physician Directory'
-            text = 'this is text'
+            text = 'Use the Physician Directory to access information about all credentialed William Osler physicians.'
             click = {() => {this.props.navigation.navigate(
               'Documents', {
                 src: 'http://www.williamoslerhs.ca/health-care-professionals/programs-services/physician-and-service-directory',
                 title: 'Physician Directory'
               }
             )}}
-          >
-          </RectIcon>
+          />
+          <RectIcon
+            title = 'Physician Directory Guide'
+            text = 'Need help using the Physician Directory? Read the Physician Directory Guide!'
+            click = {() => {this.props.navigation.navigate(
+              'Documents', {
+                src: 'http://www.williamoslerhs.ca/docs/default-source/about-osler-documents/directory-resource-guide.pdf?sfvrsn=2',
+                title: 'Directory Guide'
+              }
+            )}}
+          />
+          <RectIcon
+            title = 'PMC Referral Toolkit'
+            text = 'Use the Referral Toolkit to support timely patient referrals to Osler’s outpatient services at Peel Memorial.'
+            click = {() => {this.props.navigation.navigate(
+              'Documents', {
+                src: 'http://www.williamoslerhs.ca/docs/default-source/about-osler-documents/peel-referral-toolkit.pdf?sfvrsn=4',
+                title: 'Directory Guide'
+              }
+            )}}
+          />
+
+
+          https://gph.is/2lBWXiZ
+       
           <RectIcon
             title = 'Further Education'
             text = 'this is text'

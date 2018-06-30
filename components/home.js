@@ -33,11 +33,11 @@ export default class Home extends Component {
                 title = 'Documents'
                 click = {() => this.props.navigation.navigate('Documents', {src: 'http://www.africau.edu/images/default/sample.pdf'}) }>
               </Icon>
-              <Icon 
+            {/*  <Icon 
                 img = {require('../Pictures/Icons/askExpert_icon.png')}
                 title = 'Ask an Expert'
                 click = {() => this.props.navigation.navigate('AskExpert')}>
-              </Icon>
+            </Icon>*/}
             </View>
           </View>
         </ImageBackground>

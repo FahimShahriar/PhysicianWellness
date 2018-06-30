@@ -3,16 +3,16 @@ import {createStackNavigator} from 'react-navigation';
 import Home from '../components/home.js';
 import Wellness from '../components/wellness.js';
 import Breathing from '../components/breathing.js';
-import AskExpert from '../components/AskExpert'
-import OMA from '../components/OMA.js';
-import MSO from '../components/MSO.js';
-import CMHA from '../components/CMHA.js';
-import morneau from '../components/morneau.js';
+import {OMA, Morneau, CMHA, AskExpert} from '../components/AskExpert'
+
+import MSO from '../components/MSO.js'
+
 import Documents from '../components/documents.js';
-import FAQ from '../components/FAQ.js'
+import Resources from '../components/Resources.js'
 import Email from '../components/email.js'
 import TimeTracking from './timeTracking.js'
 import Pomodoro from './pomodoro.js'
+import {BoxBreathing, Progressive} from './breathing.js'
 
 
 let RootStack = createStackNavigator(
@@ -62,7 +62,7 @@ let RootStack = createStackNavigator(
         }),
       },
       morneau: {
-        screen: morneau,
+        screen: Morneau,
         navigationOptions: () => ({
           title: `Morneau Shepell`,
           headerBackTitle: 'MS',
@@ -82,10 +82,11 @@ let RootStack = createStackNavigator(
           headerBackTitle: 'Tracking'
         })
       },
-      FAQ:{
-        screen: FAQ, 
+      Resources:{
+        screen: Resources, 
         navigationOptions: () => ({
-          title: 'FAQ'
+          title: 'Resources',
+          headerBackTitle: 'Resources'
           }),
       },
       Breathing:{
@@ -99,7 +100,20 @@ let RootStack = createStackNavigator(
         navigationOptions: () => ({
           title: 'Pomodoro'
           }),
+      },
+      BoxBreathing:{
+        screen: BoxBreathing,
+        navigationOptions: () => ({
+          title: 'Box Breathing'
+          }),
+      },
+      Progressive:{
+        screen: Progressive,
+        navigationOptions: () => ({
+          title: 'Progressive Relaxation'
+          }),
       }
+      
 
       
 
